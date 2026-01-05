@@ -14,16 +14,23 @@ body {
 /* Navigation */
 nav {
   position: fixed;       /* keeps nav bar always visible */
-  top: 0;                /* sticks to the top */
+  top: 0;
   left: 0;
-  width: 100%;           /* full width */
+  width: 100%;           /* full width background */
   background: #2c3e50;
-  padding: 1rem 2rem;
+  padding: 1rem 0;       /* vertical padding only */
   color: #fff;
+  z-index: 1000;
+}
+
+/* Inner container for nav content */
+nav .nav-container {
+  max-width: 1100px;     /* keeps content centered */
+  margin: 0 auto;        /* centers horizontally */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;         /* ensures nav stays above other elements */
+  padding: 0 2rem;       /* horizontal spacing so links don’t touch edges */
 }
 
 nav ul {
@@ -43,7 +50,6 @@ nav a {
 nav a:hover {
   color: #1abc9c;
 }
-
 /* Hero */
 .hero {
   background: linear-gradient(to right, #1abc9c, #16a085);
@@ -122,3 +128,4 @@ footer {
   background: #2c3e50;
   color: #fff;
 }
+
