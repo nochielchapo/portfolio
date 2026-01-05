@@ -1,6 +1,7 @@
 /* Global */
 html {
   scroll-behavior: smooth; /* enables smooth scrolling when clicking nav links */
+  scroll-padding-top: 80px;      /* offset equal to nav height */
 }
 
 body {
@@ -128,4 +129,5 @@ footer {
   background: #2c3e50;
   color: #fff;
 }
+
 
