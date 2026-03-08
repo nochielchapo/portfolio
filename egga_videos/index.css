@@ -1,81 +1,48 @@
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0f0f0f;
-    color: #f1f1f1;
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
-header {
-    text-align: center;
-    padding: 50px 0;
+/* Flexbox Row Configuration */
+.video-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to move to the next row after 3 */
+    justify-content: space-between; /* Evenly spaces the 3 videos */
+    gap: 20px;
 }
 
-/* The 3-Column Grid Layout */
-.video-grid {
-    display: grid;
-    /* Forces 3 equal columns */
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 25px;
+/* Force each item to take up roughly 1/3 of the row */
+.video-item {
+    flex: 0 1 calc(33.333% - 20px); 
+    box-sizing: border-box;
+    margin-bottom: 30px;
 }
 
-.video-card {
-    background: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.video-card:hover {
-    transform: translateY(-5px);
-}
-
-/* Ensuring the video fills the card width */
 video {
     width: 100%;
-    display: block;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
+    border-radius: 8px;
     background: #000;
+    aspect-ratio: 16 / 9; /* Keeps all video boxes the same height */
 }
 
-.card-info {
-    padding: 15px;
-}
-
-.card-info h4 {
-    margin: 0 0 8px 0;
-    font-size: 1.1rem;
-}
-
-.card-info p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: #999;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .video-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
-    }
-}
-
-@media (max-width: 600px) {
-    .video-grid {
-        grid-template-columns: 1fr; /* 1 column on mobile */
-    }
-}
-
-footer {
+.video-item p {
     text-align: center;
-    padding: 40px;
-    border-top: 1px solid #222;
-    margin-top: 50px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Mobile fix: Stack videos 1 per row on small screens */
+@media (max-width: 768px) {
+    .video-item {
+        flex: 0 1 100%;
+    }
 }
