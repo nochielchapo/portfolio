@@ -3,56 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Editing Portfolio</title>
+    <title>Video Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Video Production Portfolio</h1>
-        <p>Editor & Visual Storyteller</p>
+        <h1>Video Editing Showcase</h1>
+        <p>A collection of my latest edited works</p>
     </header>
 
     <main class="container">
-        <section class="featured-video">
-            <h2>Featured Project</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="video-info">
-                <h3>Project Title</h3>
-                <p>A brief description of the editing techniques used, such as color grading, motion graphics, or sound design.</p>
-            </div>
-        </section>
-
-        <hr>
-
         <section class="video-grid">
+            
             <div class="video-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+                <video controls poster="thumbnail1.jpg">
+                    <source src="videos/project-one.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="card-info">
+                    <h4>Project Title One</h4>
+                    <p>Brief description of editing style.</p>
                 </div>
-                <h4>Commercial Work</h4>
             </div>
 
             <div class="video-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                <video controls poster="thumbnail2.jpg">
+                    <source src="videos/project-two.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="card-info">
+                    <h4>Project Title Two</h4>
+                    <p>Brief description of editing style.</p>
                 </div>
-                <h4>Event Highlight</h4>
             </div>
 
             <div class="video-card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+                <video controls poster="thumbnail3.jpg">
+                    <source src="videos/project-three.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="card-info">
+                    <h4>Project Title Three</h4>
+                    <p>Brief description of editing style.</p>
                 </div>
-                <h4>Short Film / Documentary</h4>
             </div>
+
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 | Egga</p>
+        <p>&copy; 2026 Portfolio</p>
     </footer>
 
 </body>
