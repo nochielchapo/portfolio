@@ -1,1 +1,80 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+}
+
+h1 { margin: 0; color: #ffffff; font-size: 2.5rem; }
+h2 { border-left: 4px solid #007bff; padding-left: 15px; margin-bottom: 25px; }
+
+/* Video Aspect Ratio Box (16:9) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Featured Section */
+.featured-video {
+    margin-bottom: 50px;
+}
+
+.video-info {
+    margin-top: 15px;
+}
+
+/* Grid Layout */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.video-card h4 {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 400;
+    color: #bbb;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    margin: 50px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.9rem;
+    color: #666;
+}
